@@ -142,6 +142,30 @@ Labs\Lab1\Manager\Manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.s
 .PHONY : Labs\Lab1\Manager\Manager.cpp.s
 
+Labs\Lab1\Manager\my_process.obj: Labs\Lab1\Manager\my_process.cpp.obj
+.PHONY : Labs\Lab1\Manager\my_process.obj
+
+# target to build an object file
+Labs\Lab1\Manager\my_process.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_process.cpp.obj
+.PHONY : Labs\Lab1\Manager\my_process.cpp.obj
+
+Labs\Lab1\Manager\my_process.i: Labs\Lab1\Manager\my_process.cpp.i
+.PHONY : Labs\Lab1\Manager\my_process.i
+
+# target to preprocess a source file
+Labs\Lab1\Manager\my_process.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_process.cpp.i
+.PHONY : Labs\Lab1\Manager\my_process.cpp.i
+
+Labs\Lab1\Manager\my_process.s: Labs\Lab1\Manager\my_process.cpp.s
+.PHONY : Labs\Lab1\Manager\my_process.s
+
+# target to generate assembly for a file
+Labs\Lab1\Manager\my_process.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_process.cpp.s
+.PHONY : Labs\Lab1\Manager\my_process.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -154,6 +178,9 @@ help:
 	@echo ... Labs/Lab1/Manager/Manager.obj
 	@echo ... Labs/Lab1/Manager/Manager.i
 	@echo ... Labs/Lab1/Manager/Manager.s
+	@echo ... Labs/Lab1/Manager/my_process.obj
+	@echo ... Labs/Lab1/Manager/my_process.i
+	@echo ... Labs/Lab1/Manager/my_process.s
 .PHONY : help
 
 

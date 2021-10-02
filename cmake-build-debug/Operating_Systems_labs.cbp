@@ -87,6 +87,12 @@
 		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Manager.cpp">
 			<Option target="Operating_Systems_labs"/>
 		</Unit>
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.cpp">
+			<Option target="Operating_Systems_labs"/>
+		</Unit>
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.h">
+			<Option target="Operating_Systems_labs"/>
+		</Unit>
 		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

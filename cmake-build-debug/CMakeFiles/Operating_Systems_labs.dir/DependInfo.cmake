@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Manager.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Manager.cpp.obj"
+  "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/my_process.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Manager.cpp.obj"
+  "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/my_process.cpp.obj"
   "Operating_Systems_labs.exe"
   "Operating_Systems_labs.exe.manifest"
   "Operating_Systems_labs.lib"
