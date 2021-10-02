@@ -55,33 +55,33 @@ include CMakeFiles\Operating_Systems_labs.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\Operating_Systems_labs.dir\flags.make
 
-CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.obj: CMakeFiles\Operating_Systems_labs.dir\flags.make
-CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.obj: ..\Labs\Lab1\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/main.cpp.obj"
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.obj: CMakeFiles\Operating_Systems_labs.dir\flags.make
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.obj: ..\Labs\Lab1\Manager\Manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Manager.cpp.obj"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.obj /FdCMakeFiles\Operating_Systems_labs.dir\ /FS -c C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.obj /FdCMakeFiles\Operating_Systems_labs.dir\ /FS -c C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\Manager\Manager.cpp
 <<
 
-CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/main.cpp.i"
-	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\main.cpp
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Manager.cpp.i"
+	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\Manager\Manager.cpp
 <<
 
-CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/main.cpp.s"
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Manager.cpp.s"
 	C:\PROGRA~2\MIB055~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.s /c C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.s /c C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\Manager\Manager.cpp
 <<
 
 # Object files for target Operating_Systems_labs
 Operating_Systems_labs_OBJECTS = \
-"CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.obj"
+"CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.obj"
 
 # External object files for target Operating_Systems_labs
 Operating_Systems_labs_EXTERNAL_OBJECTS =
 
-Operating_Systems_labs.exe: CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.obj
+Operating_Systems_labs.exe: CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.obj
 Operating_Systems_labs.exe: CMakeFiles\Operating_Systems_labs.dir\build.make
 Operating_Systems_labs.exe: CMakeFiles\Operating_Systems_labs.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Operating_Systems_labs.exe"

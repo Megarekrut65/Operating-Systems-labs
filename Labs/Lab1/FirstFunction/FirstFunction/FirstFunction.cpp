@@ -2,7 +2,7 @@
 
 int main()
 {
-    std::cout << "Hello FirstFunction!\n";
+    std::cout << "Hello First!\n";
     system("Pause");
     return 0;
 }

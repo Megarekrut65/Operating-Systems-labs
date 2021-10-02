@@ -4,4 +4,4 @@ project(Operating_Systems_labs)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Operating_Systems_labs
-        Labs/Lab1/main.cpp)
+        Labs/Lab1/Manager/Manager.cpp)

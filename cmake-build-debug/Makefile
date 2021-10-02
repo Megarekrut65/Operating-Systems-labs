@@ -118,29 +118,29 @@ Operating_Systems_labs\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\build
 .PHONY : Operating_Systems_labs\fast
 
-Labs\Lab1\main.obj: Labs\Lab1\main.cpp.obj
-.PHONY : Labs\Lab1\main.obj
+Labs\Lab1\Manager\Manager.obj: Labs\Lab1\Manager\Manager.cpp.obj
+.PHONY : Labs\Lab1\Manager\Manager.obj
 
 # target to build an object file
-Labs\Lab1\main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.obj
-.PHONY : Labs\Lab1\main.cpp.obj
+Labs\Lab1\Manager\Manager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.obj
+.PHONY : Labs\Lab1\Manager\Manager.cpp.obj
 
-Labs\Lab1\main.i: Labs\Lab1\main.cpp.i
-.PHONY : Labs\Lab1\main.i
+Labs\Lab1\Manager\Manager.i: Labs\Lab1\Manager\Manager.cpp.i
+.PHONY : Labs\Lab1\Manager\Manager.i
 
 # target to preprocess a source file
-Labs\Lab1\main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.i
-.PHONY : Labs\Lab1\main.cpp.i
+Labs\Lab1\Manager\Manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.i
+.PHONY : Labs\Lab1\Manager\Manager.cpp.i
 
-Labs\Lab1\main.s: Labs\Lab1\main.cpp.s
-.PHONY : Labs\Lab1\main.s
+Labs\Lab1\Manager\Manager.s: Labs\Lab1\Manager\Manager.cpp.s
+.PHONY : Labs\Lab1\Manager\Manager.s
 
 # target to generate assembly for a file
-Labs\Lab1\main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\main.cpp.s
-.PHONY : Labs\Lab1\main.cpp.s
+Labs\Lab1\Manager\Manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.s
+.PHONY : Labs\Lab1\Manager\Manager.cpp.s
 
 # Help Target
 help:
@@ -151,9 +151,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Operating_Systems_labs
-	@echo ... Labs/Lab1/main.obj
-	@echo ... Labs/Lab1/main.i
-	@echo ... Labs/Lab1/main.s
+	@echo ... Labs/Lab1/Manager/Manager.obj
+	@echo ... Labs/Lab1/Manager/Manager.i
+	@echo ... Labs/Lab1/Manager/Manager.s
 .PHONY : help
 
 
