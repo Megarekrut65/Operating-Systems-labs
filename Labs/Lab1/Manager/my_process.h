@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
 #include <windows.h>
-#include <cstdio>
 #include <tchar.h>
 #include <thread>
+#include <iostream>
 /**
  * My process
  */

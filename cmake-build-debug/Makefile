@@ -118,29 +118,53 @@ Operating_Systems_labs\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\build
 .PHONY : Operating_Systems_labs\fast
 
-Labs\Lab1\Manager\Manager.obj: Labs\Lab1\Manager\Manager.cpp.obj
-.PHONY : Labs\Lab1\Manager\Manager.obj
+Labs\Lab1\Manager\Server\my_server.obj: Labs\Lab1\Manager\Server\my_server.cpp.obj
+.PHONY : Labs\Lab1\Manager\Server\my_server.obj
 
 # target to build an object file
-Labs\Lab1\Manager\Manager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.obj
-.PHONY : Labs\Lab1\Manager\Manager.cpp.obj
+Labs\Lab1\Manager\Server\my_server.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Server\my_server.cpp.obj
+.PHONY : Labs\Lab1\Manager\Server\my_server.cpp.obj
 
-Labs\Lab1\Manager\Manager.i: Labs\Lab1\Manager\Manager.cpp.i
-.PHONY : Labs\Lab1\Manager\Manager.i
+Labs\Lab1\Manager\Server\my_server.i: Labs\Lab1\Manager\Server\my_server.cpp.i
+.PHONY : Labs\Lab1\Manager\Server\my_server.i
 
 # target to preprocess a source file
-Labs\Lab1\Manager\Manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.i
-.PHONY : Labs\Lab1\Manager\Manager.cpp.i
+Labs\Lab1\Manager\Server\my_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Server\my_server.cpp.i
+.PHONY : Labs\Lab1\Manager\Server\my_server.cpp.i
 
-Labs\Lab1\Manager\Manager.s: Labs\Lab1\Manager\Manager.cpp.s
-.PHONY : Labs\Lab1\Manager\Manager.s
+Labs\Lab1\Manager\Server\my_server.s: Labs\Lab1\Manager\Server\my_server.cpp.s
+.PHONY : Labs\Lab1\Manager\Server\my_server.s
 
 # target to generate assembly for a file
-Labs\Lab1\Manager\Manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Manager.cpp.s
-.PHONY : Labs\Lab1\Manager\Manager.cpp.s
+Labs\Lab1\Manager\Server\my_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Server\my_server.cpp.s
+.PHONY : Labs\Lab1\Manager\Server\my_server.cpp.s
+
+Labs\Lab1\Manager\main.obj: Labs\Lab1\Manager\main.cpp.obj
+.PHONY : Labs\Lab1\Manager\main.obj
+
+# target to build an object file
+Labs\Lab1\Manager\main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj
+.PHONY : Labs\Lab1\Manager\main.cpp.obj
+
+Labs\Lab1\Manager\main.i: Labs\Lab1\Manager\main.cpp.i
+.PHONY : Labs\Lab1\Manager\main.i
+
+# target to preprocess a source file
+Labs\Lab1\Manager\main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.i
+.PHONY : Labs\Lab1\Manager\main.cpp.i
+
+Labs\Lab1\Manager\main.s: Labs\Lab1\Manager\main.cpp.s
+.PHONY : Labs\Lab1\Manager\main.s
+
+# target to generate assembly for a file
+Labs\Lab1\Manager\main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.s
+.PHONY : Labs\Lab1\Manager\main.cpp.s
 
 Labs\Lab1\Manager\my_process.obj: Labs\Lab1\Manager\my_process.cpp.obj
 .PHONY : Labs\Lab1\Manager\my_process.obj
@@ -175,9 +199,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Operating_Systems_labs
-	@echo ... Labs/Lab1/Manager/Manager.obj
-	@echo ... Labs/Lab1/Manager/Manager.i
-	@echo ... Labs/Lab1/Manager/Manager.s
+	@echo ... Labs/Lab1/Manager/Server/my_server.obj
+	@echo ... Labs/Lab1/Manager/Server/my_server.i
+	@echo ... Labs/Lab1/Manager/Server/my_server.s
+	@echo ... Labs/Lab1/Manager/main.obj
+	@echo ... Labs/Lab1/Manager/main.i
+	@echo ... Labs/Lab1/Manager/main.s
 	@echo ... Labs/Lab1/Manager/my_process.obj
 	@echo ... Labs/Lab1/Manager/my_process.i
 	@echo ... Labs/Lab1/Manager/my_process.s

@@ -22,7 +22,7 @@ namespace mp
         if (!CreateProcess(app_path.c_str(),
                            nullptr,nullptr,nullptr,FALSE,0,nullptr,nullptr,&si,&pi))
         {
-            printf("CreateProcess failed (%lu).\n", GetLastError());
+            std::cerr << "CreateProcess failed " << GetLastError() << std::endl;
             return;
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(port));

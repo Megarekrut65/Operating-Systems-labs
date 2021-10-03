@@ -6,29 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Manager.cpp
-cstdio
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.cpp
+my_server.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.h
+
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.h
+string
 -
-my_process.h
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.h
-future
--
-thread
--
-queue
+WS2tcpip.h
 -
 iostream
 -
 
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.h
-string
--
-windows.h
--
-cstdio
--
-tchar.h
--
-thread
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/main.cpp
+Server/my_server.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.h
+future
 -
 
