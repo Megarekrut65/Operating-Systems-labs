@@ -34,6 +34,10 @@ namespace mc
     }
     std::string MyClient::func(int x)
     {
+        if (x == -1)
+        {
+            throw std::logic_error{"Function(-1) = undef"};
+        }
         return std::to_string(x * x);
     }
     void MyClient::run() {

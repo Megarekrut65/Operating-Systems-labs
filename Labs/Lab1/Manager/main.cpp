@@ -7,12 +7,13 @@ ms::FunctionResult* run(ms::FunctionParam x, char path[])
 }
 int main()
 {
-    ms::FunctionParam x = 10;
+    ms::FunctionParam x = -1;
     char f_path[]=R"(C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\FirstFunction\Debug\FirstFunction.exe)";
     std::future<ms::FunctionResult*> fut =
             std::async(std::launch::async, run, x, f_path);
     auto res = fut.get();
     if(res) std::cout << "f("<<x << ")=" << *res << std::endl;
+    delete res;
     std::cout << "End" << std::endl;
     return 0;
 }
