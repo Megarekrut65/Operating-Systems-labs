@@ -2,16 +2,16 @@
 
 namespace mp
 {
-    MyProcess::MyProcess(const std::string &app_path, int port) : app_path(app_path),
-    pi(PROCESS_INFORMATION()), port(port) {create_new_process();}
+    MyProcess::MyProcess(const std::string &app_path,const std::string& ip, int port) : app_path(app_path),
+    pi(PROCESS_INFORMATION()), port(port),ip(ip) {create_new_process();}
 
-    FunctionResult MyProcess::get_result() {
-        //run function using std::async
-        //use socket
+    FunctionResult* MyProcess::get_result(FunctionParam x) {
+        MyServer server{ip,port};
+        auto res = server.run(x);
         WaitForSingleObject(pi.hProcess, INFINITE);
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
-        return 0;
+        return res;
     }
 
     void MyProcess::create_new_process() {
@@ -25,6 +25,5 @@ namespace mp
             std::cerr << "CreateProcess failed " << GetLastError() << std::endl;
             return;
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(port));
     }
 }

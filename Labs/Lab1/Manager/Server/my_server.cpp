@@ -34,20 +34,20 @@ namespace ms
         return hint;
     }
 
-    void MyServer::run() {
+    FunctionResult* MyServer::run(FunctionParam x) {
         sockaddr_in address = get_address();
         if(bind(sock, (sockaddr*)&address, sizeof(address)) == SOCKET_ERROR)
         {
             std::cerr << "Can't bind socket!" << std::endl;
-            return;
+            return nullptr;
         }
         listen(sock, SOMAXCONN);
         SOCKET client = accept(sock, nullptr, nullptr);
-        char buf[BUFFER_SIZE];
-        while (std::cin >> buf)
-        {
-            send(client, buf, 8, 0);
-        }
+        send(client, std::to_string(x).c_str(), BUFFER_SIZE, 0);
+        char buffer[BUFFER_SIZE];
+        int res = recv(client, buffer, BUFFER_SIZE, 0);
+        if(res != SOCKET_ERROR) return new FunctionResult(atoi(buffer));
+        return nullptr;
     }
 
     void MyServer::close() {

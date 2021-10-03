@@ -6,7 +6,9 @@ CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Server\my_server.cpp.obj
 
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\Lab1\Manager\Server\my_server.h
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\Lab1\Manager\main.cpp
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\Lab1\Manager\my_process.h
 
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_process.cpp.obj: ..\Labs\Lab1\Manager\Server\my_server.h
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_process.cpp.obj: ..\Labs\Lab1\Manager\my_process.cpp
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_process.cpp.obj: ..\Labs\Lab1\Manager\my_process.h
 

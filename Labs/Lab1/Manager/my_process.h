@@ -1,15 +1,14 @@
 #pragma once
 #include <string>
-#include <windows.h>
 #include <tchar.h>
-#include <thread>
 #include <iostream>
+#include "Server/my_server.h"
 /**
  * My process
  */
 namespace mp
 {
-    using FunctionResult = int;
+    using namespace ms;
     class MyProcess {
     private:
         std::string app_path;
@@ -18,8 +17,8 @@ namespace mp
         PROCESS_INFORMATION pi;
         void create_new_process();
     public:
-        MyProcess(const std::string &app_path, int port);
-        FunctionResult get_result();
+        MyProcess(const std::string &app_path,const std::string& ip, int port);
+        FunctionResult* get_result(FunctionParam x);
     };
 }
 

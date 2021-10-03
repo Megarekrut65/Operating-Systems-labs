@@ -6,6 +6,8 @@
 #pragma comment(lib, "ws2_32.lib")
 namespace ms
 {
+    using FunctionResult = int;
+    using FunctionParam = int;
     class MyServer {
     private:
         std::string ip;
@@ -18,7 +20,7 @@ namespace ms
     public:
         MyServer(const std::string &ip, int port);
 
-        void run();
+        FunctionResult* run(FunctionParam x);
         void close();
         ~MyServer();
     };
