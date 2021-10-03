@@ -6,9 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.cpp
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Manager.cpp
+cstdio
+-
 my_process.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.h
+future
+-
+thread
+-
+queue
+-
+iostream
+-
 
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.h
 string
@@ -18,5 +28,7 @@ windows.h
 cstdio
 -
 tchar.h
+-
+thread
 -
 
