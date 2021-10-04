@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.cpp">
+			<Option target="Operating_Systems_labs"/>
+		</Unit>
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.h">
+			<Option target="Operating_Systems_labs"/>
+		</Unit>
 		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.cpp">
 			<Option target="Operating_Systems_labs"/>
 		</Unit>
@@ -93,10 +99,10 @@
 		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/main.cpp">
 			<Option target="Operating_Systems_labs"/>
 		</Unit>
-		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.cpp">
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_data.cpp">
 			<Option target="Operating_Systems_labs"/>
 		</Unit>
-		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_process.h">
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_data.h">
 			<Option target="Operating_Systems_labs"/>
 		</Unit>
 		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/CMakeLists.txt">

@@ -1,16 +1,20 @@
-#include "my_process.h"
+#include "Process/my_process.h"
+#include "Server/my_server.h"
+#include "my_data.h"
 #include <future>
-ms::FunctionResult* run(ms::FunctionParam x, char path[])
+ms::FunctionResult* run(ms::FunctionParam x, const std::string& app_path, const std::string& ip, int port)
 {
-    mp::MyProcess process{std::string(path),"192.168.1.4",27015};
-    return process.get_result(x);
+    mp::MyProcess process{app_path};
+    ms::MyServer server{ip, port};
+    auto res = server.run(x);
+    process.wait_for_close();
+    return res;
 }
 int main()
 {
-    ms::FunctionParam x = -1;
-    char f_path[]=R"(C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\FirstFunction\Debug\FirstFunction.exe)";
+    ms::FunctionParam x = 5;
     std::future<ms::FunctionResult*> fut =
-            std::async(std::launch::async, run, x, f_path);
+            std::async(std::launch::async, run, x, myd::MyData::F_APP_PATH, myd::MyData::IP, myd::MyData::F_PORT);
     auto res = fut.get();
     if(res) std::cout << "f("<<x << ")=" << *res << std::endl;
     delete res;
