@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Server/my_server.cpp.obj"
   "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/main.cpp.obj"
   "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/my_data.cpp.obj"
+  "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/my_manager.cpp.obj"
   "Operating_Systems_labs.exe"
   "Operating_Systems_labs.exe.manifest"
   "Operating_Systems_labs.lib"

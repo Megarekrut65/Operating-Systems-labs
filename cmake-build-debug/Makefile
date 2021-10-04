@@ -214,6 +214,30 @@ Labs\Lab1\Manager\my_data.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_data.cpp.s
 .PHONY : Labs\Lab1\Manager\my_data.cpp.s
 
+Labs\Lab1\Manager\my_manager.obj: Labs\Lab1\Manager\my_manager.cpp.obj
+.PHONY : Labs\Lab1\Manager\my_manager.obj
+
+# target to build an object file
+Labs\Lab1\Manager\my_manager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.obj
+.PHONY : Labs\Lab1\Manager\my_manager.cpp.obj
+
+Labs\Lab1\Manager\my_manager.i: Labs\Lab1\Manager\my_manager.cpp.i
+.PHONY : Labs\Lab1\Manager\my_manager.i
+
+# target to preprocess a source file
+Labs\Lab1\Manager\my_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.i
+.PHONY : Labs\Lab1\Manager\my_manager.cpp.i
+
+Labs\Lab1\Manager\my_manager.s: Labs\Lab1\Manager\my_manager.cpp.s
+.PHONY : Labs\Lab1\Manager\my_manager.s
+
+# target to generate assembly for a file
+Labs\Lab1\Manager\my_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.s
+.PHONY : Labs\Lab1\Manager\my_manager.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -235,6 +259,9 @@ help:
 	@echo ... Labs/Lab1/Manager/my_data.obj
 	@echo ... Labs/Lab1/Manager/my_data.i
 	@echo ... Labs/Lab1/Manager/my_data.s
+	@echo ... Labs/Lab1/Manager/my_manager.obj
+	@echo ... Labs/Lab1/Manager/my_manager.i
+	@echo ... Labs/Lab1/Manager/my_manager.s
 .PHONY : help
 
 

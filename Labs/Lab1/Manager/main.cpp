@@ -1,23 +1,35 @@
-#include "Process/my_process.h"
-#include "Server/my_server.h"
-#include "my_data.h"
-#include <future>
-ms::FunctionResult* run(ms::FunctionParam x, const std::string& app_path, const std::string& ip, int port)
-{
-    mp::MyProcess process{app_path};
-    ms::MyServer server{ip, port};
-    auto res = server.run(x);
-    process.wait_for_close();
-    return res;
-}
+#include "my_manager.h"
+#include <conio.h>
+
+void user_menu(myshv::SharedValue<bool>& value);
 int main()
 {
+    std::cout << "Enter x: ";
     ms::FunctionParam x = 5;
-    std::future<ms::FunctionResult*> fut =
-            std::async(std::launch::async, run, x, myd::MyData::F_APP_PATH, myd::MyData::IP, myd::MyData::F_PORT);
-    auto res = fut.get();
-    if(res) std::cout << "f("<<x << ")=" << *res << std::endl;
-    delete res;
-    std::cout << "End" << std::endl;
+    std::cin >> x;
+    myshv::SharedValue<bool> value(false);
+    std::future<void> fut =
+            std::async(std::launch::async, mym::MyManager::run, x, std::ref(value));
+    user_menu(value);
     return 0;
+}
+void user_menu(myshv::SharedValue<bool>& value)
+{
+    std::cout << "Press Enter or Ctrl+c to stop calculation" << std::endl;
+    while(true)
+    {
+        if(_kbhit() && _getch() == 13)
+        {
+            std::cout << "You definitely want to stop the program? Enter y(yes)/n(no).\n";
+            char press = _getch();
+            if(press == 'n') continue;
+            else if(press == 'y')
+            {
+                value.set_value(true);
+                std::cout << "Close" << std::endl;
+                break;
+            }
+            std::cout << "....." << std::endl;
+        }
+    }
 }

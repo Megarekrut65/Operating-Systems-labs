@@ -15,7 +15,9 @@ namespace mp
         void create_new_process();
     public:
         MyProcess(const std::string &app_path);
+        ~MyProcess();
         void wait_for_close();
+        void close();
     };
 }
 

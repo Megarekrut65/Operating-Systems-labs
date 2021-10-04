@@ -7,8 +7,7 @@ namespace mp
 
     void MyProcess::wait_for_close() {
         WaitForSingleObject(pi.hProcess, INFINITE);
-        CloseHandle(pi.hProcess);
-        CloseHandle(pi.hThread);
+        close();
     }
 
     void MyProcess::create_new_process() {
@@ -22,5 +21,15 @@ namespace mp
             std::cerr << "CreateProcess failed " << GetLastError() << std::endl;
             return;
         }
+    }
+
+    MyProcess::~MyProcess() {
+        close();
+    }
+
+    void MyProcess::close() {
+        CloseHandle(pi.hProcess);
+        CloseHandle(pi.hThread);
+        std::cout << "Process ("<<app_path << ") is closed" << std::endl;
     }
 }

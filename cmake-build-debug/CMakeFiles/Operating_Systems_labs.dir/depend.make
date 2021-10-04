@@ -11,7 +11,16 @@ CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\La
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\Lab1\Manager\Server\my_server.h
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\Lab1\Manager\main.cpp
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\Lab1\Manager\my_data.h
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\Lab1\Manager\my_manager.h
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\main.cpp.obj: ..\Labs\Lab1\Manager\shared_value.h
 
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_data.cpp.obj: ..\Labs\Lab1\Manager\my_data.cpp
 CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_data.cpp.obj: ..\Labs\Lab1\Manager\my_data.h
+
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.obj: ..\Labs\Lab1\Manager\Process\my_process.h
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.obj: ..\Labs\Lab1\Manager\Server\my_server.h
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.obj: ..\Labs\Lab1\Manager\my_data.h
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.obj: ..\Labs\Lab1\Manager\my_manager.cpp
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.obj: ..\Labs\Lab1\Manager\my_manager.h
+CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\my_manager.cpp.obj: ..\Labs\Lab1\Manager\shared_value.h
 

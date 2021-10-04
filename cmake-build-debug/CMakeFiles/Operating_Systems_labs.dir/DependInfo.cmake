@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Server/my_server.cpp.obj"
   "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/main.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/main.cpp.obj"
   "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_data.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/my_data.cpp.obj"
+  "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_manager.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/my_manager.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

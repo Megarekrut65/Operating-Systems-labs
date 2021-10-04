@@ -53,6 +53,7 @@ namespace ms
     void MyServer::close() {
         WSACleanup();
         closesocket(sock);
+        std::cout << "Server(" << ip<<","<<port<<") is closed" << std::endl;
     }
 
     MyServer::~MyServer() {
