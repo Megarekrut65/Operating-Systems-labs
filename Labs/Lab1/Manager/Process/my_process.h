@@ -12,6 +12,7 @@ namespace mp
     private:
         std::string app_path;
         PROCESS_INFORMATION pi;
+        bool is_close;
         void create_new_process();
     public:
         MyProcess(const std::string &app_path);

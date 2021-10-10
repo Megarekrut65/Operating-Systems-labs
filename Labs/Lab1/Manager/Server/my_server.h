@@ -15,6 +15,7 @@ namespace ms
         int port;
         SOCKET sock;
         const int MAX_ERRORS;
+        bool is_close;
         sockaddr_in get_address();
         void start_up();
         void create_socket();

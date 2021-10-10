@@ -3,7 +3,7 @@
 namespace mp
 {
     MyProcess::MyProcess(const std::string &app_path) : app_path(app_path),
-    pi(PROCESS_INFORMATION()) {create_new_process();}
+    pi(PROCESS_INFORMATION()), is_close(false) {create_new_process();}
 
     void MyProcess::wait_for_close() {
         WaitForSingleObject(pi.hProcess, INFINITE);
@@ -28,6 +28,8 @@ namespace mp
     }
 
     void MyProcess::close() {
+        if(is_close) return;
+        is_close = true;
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
         std::cout << "Process ("<<app_path << ") is closed" << std::endl;

@@ -14,5 +14,5 @@ namespace other
         GRAY
     };
     void set_color(int text, int background);
-    void set_color(Color text, Color background);
+    void set_color(Color text = Color::WHITE, Color background = Color::BLACK);
 }

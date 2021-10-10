@@ -4,7 +4,7 @@ namespace ms
 {
     const std::size_t MyServer::BUFFER_SIZE = 1024;
     MyServer::MyServer(const std::string &ip, int port) :
-    ip{ip}, port{port}, sock{0},MAX_ERRORS{10} {
+    ip{ip}, port{port}, sock{0},MAX_ERRORS{10}, is_close{false} {
         start_up();
         create_socket();
     }
@@ -58,6 +58,8 @@ namespace ms
     }
 
     void MyServer::close() {
+        if(is_close) return;
+        is_close = true;
         WSACleanup();
         closesocket(sock);
         std::cout << "Server(" << ip<<","<<port<<") is closed" << std::endl;

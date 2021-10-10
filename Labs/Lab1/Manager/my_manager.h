@@ -4,8 +4,10 @@
 #include "Process/my_process.h"
 #include <future>
 #include "Addition classes and functions/shared_value.h"
+#include "Addition classes and functions/other_functions.h"
 namespace mym
 {
+    using other::Color;
     class MyManager {
     private:
         static void print_res(const std::string& fun_name, ms::FunctionParam x, ms::FunctionResult* y);

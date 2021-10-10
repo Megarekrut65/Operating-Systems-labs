@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.cpp
-other_functions.h
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.h
-
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.h
 WS2tcpip.h
 -
@@ -17,6 +13,10 @@ WS2tcpip.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/shared_value.h
 mutex
 -
+
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.cpp
+my_process.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.h
 
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.h
 string
@@ -27,6 +27,10 @@ iostream
 -
 WS2tcpip.h
 -
+
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.cpp
+my_server.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.h
 
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.h
 string
@@ -48,6 +52,10 @@ C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manag
 string
 -
 
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_manager.cpp
+my_manager.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_manager.h
+
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_manager.h
 my_data.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_data.h
@@ -59,4 +67,6 @@ future
 -
 Addition classes and functions/shared_value.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/shared_value.h
+Addition classes and functions/other_functions.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.h
 

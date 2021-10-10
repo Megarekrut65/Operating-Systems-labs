@@ -5,7 +5,7 @@ void user_menu(myshv::SharedValue<bool>& value);
 using other::Color;
 int main()
 {
-    other::set_color(Color::BLACK, Color::WHITE);
+    other::set_color();
     std::cout << "Enter x: ";
     ms::FunctionParam x = 5;
     std::cin >> x;
@@ -16,8 +16,11 @@ int main()
     return 0;
 }
 bool close_menu(){
+    other::set_color(Color::YELLOW, Color::BLACK);
     std::cout << "You definitely want to stop the program? Enter y(yes)/n(no).\n";
+    other::set_color();
     char press = _getch();
+    if(press != 13) char enter=_getch();
     if(press == 'y') return true;
     return false;
 }
@@ -35,13 +38,17 @@ void user_menu(myshv::SharedValue<bool>& value)
             {
                 to_close = fut.get();
             }
+            other::set_color(Color::YELLOW, Color::BLACK);
             if(to_close)
             {
                 value.set_value(true);
                 std::cout << "Close..." << std::endl;
+                other::set_color();
                 break;
             }
             else std::cout << "Not close..." << std::endl;
+            other::set_color();
+
         }
     }
 }
