@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/my_printer.cpp
-my_printer.h
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/my_printer.h
-
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/my_printer.h
 other_functions.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.h
@@ -26,10 +22,6 @@ C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manag
 mutex
 -
 
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.cpp
-my_process.h
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.h
-
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.h
 string
 -
@@ -42,10 +34,6 @@ WS2tcpip.h
 ../Addition classes and functions/my_printer.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/my_printer.h
 
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.cpp
-my_server.h
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.h
-
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.h
 string
 -
@@ -55,12 +43,6 @@ iostream
 -
 ../Addition classes and functions/my_printer.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/my_printer.h
-
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/main.cpp
-my_manager.h
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_manager.h
-conio.h
--
 
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_data.h
 string

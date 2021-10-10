@@ -42,6 +42,11 @@ namespace mym
             Printer::println(Color::PURPLE, Color::BLACK,"\n",fun_name,"(",x,")=",*y);
             delete y;
         }
+        else
+        {
+            Printer::println(Color::PURPLE, Color::BLACK,
+                             "\n",fun_name,"(",x,") is not calculated!");
+        }
     }
 
     ms::FunctionResult *MyManager::start_calculating(ms::MyServer &server,
