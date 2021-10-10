@@ -12,7 +12,8 @@ namespace mc
         std::string ip;
         const static std::size_t BUFFER_SIZE;
         int port;
-        SOCKET sock;
+        SOCKET sock; 
+        const int MAX_ERRORS;
         sockaddr_in get_address();
         void start_up();
         void create_socket();

@@ -4,7 +4,7 @@ namespace ms
 {
     const std::size_t MyServer::BUFFER_SIZE = 1024;
     MyServer::MyServer(const std::string &ip, int port) :
-    ip{ip}, port{port}, sock{0} {
+    ip{ip}, port{port}, sock{0},MAX_ERRORS{10} {
         start_up();
         create_socket();
     }
@@ -43,11 +43,18 @@ namespace ms
         }
         listen(sock, SOMAXCONN);
         SOCKET client = accept(sock, nullptr, nullptr);
-        send(client, std::to_string(x).c_str(), BUFFER_SIZE, 0);
-        char buffer[BUFFER_SIZE];
-        int res = recv(client, buffer, BUFFER_SIZE, 0);
-        if(res != SOCKET_ERROR) return new FunctionResult(atoi(buffer));
-        return nullptr;
+        FunctionResult* res = nullptr;
+        int errors = 0;
+        while (res == nullptr && errors < MAX_ERRORS)
+        {
+            send(client, std::to_string(x).c_str(), BUFFER_SIZE, 0);
+            char buffer[BUFFER_SIZE];
+            int err = recv(client, buffer, BUFFER_SIZE, 0);
+            if(err != SOCKET_ERROR) res = normalize_result(buffer);
+            errors++;
+        }
+
+        return res;
     }
 
     void MyServer::close() {
@@ -58,5 +65,16 @@ namespace ms
 
     MyServer::~MyServer() {
         close();
+    }
+
+    FunctionResult* MyServer::normalize_result(char *buffer) {
+        if(buffer == nullptr) throw std::invalid_argument{"Buffer can't be nullptr!"};
+        char* err = nullptr;
+        FunctionResult res = strtol(buffer, &err, 10);
+        if(*err != 0){
+            std::cerr << buffer << std::endl;
+            return nullptr;
+        }
+        return new FunctionResult(res);
     }
 }

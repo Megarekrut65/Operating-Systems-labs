@@ -84,6 +84,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.cpp">
+			<Option target="Operating_Systems_labs"/>
+		</Unit>
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.h">
+			<Option target="Operating_Systems_labs"/>
+		</Unit>
+		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/shared_value.h">
+			<Option target="Operating_Systems_labs"/>
+		</Unit>
 		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.cpp">
 			<Option target="Operating_Systems_labs"/>
 		</Unit>
@@ -109,9 +118,6 @@
 			<Option target="Operating_Systems_labs"/>
 		</Unit>
 		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_manager.h">
-			<Option target="Operating_Systems_labs"/>
-		</Unit>
-		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/shared_value.h">
 			<Option target="Operating_Systems_labs"/>
 		</Unit>
 		<Unit filename="C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/CMakeLists.txt">

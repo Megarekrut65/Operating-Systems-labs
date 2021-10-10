@@ -14,9 +14,11 @@ namespace ms
         const static std::size_t BUFFER_SIZE;
         int port;
         SOCKET sock;
+        const int MAX_ERRORS;
         sockaddr_in get_address();
         void start_up();
         void create_socket();
+        FunctionResult* normalize_result(char* buffer);
     public:
         MyServer(const std::string &ip, int port);
 

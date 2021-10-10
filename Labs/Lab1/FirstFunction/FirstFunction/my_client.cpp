@@ -3,7 +3,7 @@ namespace mc
 {
     const std::size_t MyClient::BUFFER_SIZE = 1024;
     MyClient::MyClient(const std::string& ip, int port) :
-        ip{ ip }, port{ port }, sock{ 0 } {
+        ip{ ip }, port{ port }, sock{ 0 }, MAX_ERRORS{ 10 } {
         start_up();
         create_socket();
     }
@@ -36,7 +36,7 @@ namespace mc
     {
         if (x == -1)
         {
-            throw std::logic_error{"Function(-1) = undef"};
+            return "Invalid argument!";
         }
         return std::to_string(x * x);
     }
@@ -47,9 +47,16 @@ namespace mc
             std::cerr << "Can't connect to server!" << std::endl;
             return;
         }
-        char buffer[BUFFER_SIZE];
-        int res = recv(sock, buffer, BUFFER_SIZE,0);
-        if (res != SOCKET_ERROR) send(sock, func(atoi(buffer)).c_str(), BUFFER_SIZE, 0);
+        char* error = nullptr;
+        int errors = 0;
+        do {
+            char buffer[BUFFER_SIZE];
+            int err = recv(sock, buffer, BUFFER_SIZE, 0);
+            std::string res = func(atoi(buffer));
+            int res_int = strtol(res.c_str(), &error, 10);
+            if (err != SOCKET_ERROR) send(sock, res.c_str(), BUFFER_SIZE, 0);
+            errors++;
+        } while (*error != 0 && errors < MAX_ERRORS);
     }
 
     void MyClient::close() {

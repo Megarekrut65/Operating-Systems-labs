@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.cpp
+other_functions.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.h
+
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.h
+WS2tcpip.h
+-
+
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/shared_value.h
+mutex
+-
+
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.h
 string
 -
@@ -29,6 +41,8 @@ my_manager.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_manager.h
 conio.h
 -
+Addition classes and functions/other_functions.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.h
 
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/my_data.h
 string
@@ -43,10 +57,6 @@ Process/my_process.h
 C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.h
 future
 -
-shared_value.h
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/shared_value.h
-
-C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/shared_value.h
-mutex
--
+Addition classes and functions/shared_value.h
+C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/shared_value.h
 
