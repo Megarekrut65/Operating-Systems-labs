@@ -8,7 +8,7 @@ int main()
 {
     Printer::set_base_colors();
     Printer::print("Enter x: ");
-    ms::FunctionParam x = 5;
+    mys::FunctionParam x = 5;
     std::cin >> x;
     myshv::SharedValue<bool> value(false);
     std::future<void> fut =

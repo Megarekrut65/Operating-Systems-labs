@@ -1,6 +1,6 @@
 #include "my_server.h"
 
-namespace ms
+namespace mys
 {
     const std::size_t MyServer::BUFFER_SIZE = 1024;
     MyServer::MyServer(const std::string &ip, int port) :
@@ -62,7 +62,8 @@ namespace ms
         is_close = true;
         WSACleanup();
         closesocket(sock);
-        Printer::println("\nServer(",ip,",",port,") is closed");
+        Printer::println(other::Color::GREEN, other::Color::BLACK,
+                         "\nServer(",ip,",",port,") is closed");
     }
 
     MyServer::~MyServer() {

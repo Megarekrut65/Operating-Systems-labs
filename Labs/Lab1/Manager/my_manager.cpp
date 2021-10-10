@@ -2,11 +2,11 @@
 namespace mym
 {
 
-    ms::FunctionResult*
-    MyManager::calculate_function(ms::FunctionParam x, myshv::SharedValue<bool>& shared,
+    mys::FunctionResult*
+    MyManager::calculate_function(mys::FunctionParam x, myshv::SharedValue<bool>& shared,
                                   const std::string &app_path, const std::string &ip, int port) {
-        mp::MyProcess process{app_path};
-        ms::MyServer server{ip, port};
+        myp::MyProcess process{app_path};
+        mys::MyServer server{ip, port};
         auto fut = std::async(std::launch::async, mym::MyManager::start_calculating, std::ref(server),
                               std::ref(process), x);
         while(fut.wait_for(std::chrono::milliseconds(100)) != std::future_status::ready)
@@ -21,11 +21,11 @@ namespace mym
         return fut.get();
     }
 
-    void MyManager::run(ms::FunctionParam x, myshv::SharedValue<bool>& shared) {
-        std::future<ms::FunctionResult*> f_fut =
+    void MyManager::run(mys::FunctionParam x, myshv::SharedValue<bool>& shared) {
+        std::future<mys::FunctionResult*> f_fut =
                 std::async(std::launch::async,MyManager::calculate_function, x,std::ref(shared),
                            myd::MyData::F_APP_PATH, myd::MyData::IP, myd::MyData::F_PORT);
-        std::future<ms::FunctionResult*> g_fut =
+        std::future<mys::FunctionResult*> g_fut =
                 std::async(std::launch::async,MyManager::calculate_function, x,std::ref(shared),
                            myd::MyData::G_APP_PATH, myd::MyData::IP, myd::MyData::G_PORT);
         auto f_res = f_fut.get();
@@ -36,7 +36,7 @@ namespace mym
         shared.set_value(true);
     }
 
-    void MyManager::print_res(const std::string& fun_name, ms::FunctionParam x, ms::FunctionResult* y) {
+    void MyManager::print_res(const std::string& fun_name, mys::FunctionParam x, mys::FunctionResult* y) {
         if(y)
         {
             Printer::println(Color::PURPLE, Color::BLACK,"\n",fun_name,"(",x,")=",*y);
@@ -49,8 +49,8 @@ namespace mym
         }
     }
 
-    ms::FunctionResult *MyManager::start_calculating(ms::MyServer &server,
-                                                     mp::MyProcess &process, ms::FunctionParam x) {
+    mys::FunctionResult *MyManager::start_calculating(mys::MyServer &server,
+                                                      myp::MyProcess &process, mys::FunctionParam x) {
         auto res = server.run(x);
         process.wait_for_close();
         return res;

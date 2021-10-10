@@ -1,6 +1,6 @@
 #include "my_process.h"
 
-namespace mp
+namespace myp
 {
     MyProcess::MyProcess(const std::string &app_path) : app_path(app_path),
     pi(PROCESS_INFORMATION()), is_close(false) {create_new_process();}
@@ -32,6 +32,7 @@ namespace mp
         is_close = true;
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
-        Printer::println("\nProcess (",app_path,") is closed");
+        Printer::println(other::Color::AQUA, other::Color::BLACK,
+                         "\nProcess (",app_path,") is closed");
     }
 }

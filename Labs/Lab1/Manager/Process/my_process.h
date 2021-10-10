@@ -7,7 +7,7 @@
 /**
  * My process
  */
-namespace mp
+namespace myp
 {
     using other::Printer;
     class MyProcess {

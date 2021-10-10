@@ -5,7 +5,7 @@
 #include <iostream>
 #include "../Addition classes and functions/my_printer.h"
 #pragma comment(lib, "ws2_32.lib")
-namespace ms
+namespace mys
 {
     using other::Printer;
     using FunctionResult = int;
