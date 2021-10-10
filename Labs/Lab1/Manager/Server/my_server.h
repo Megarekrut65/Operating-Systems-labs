@@ -3,9 +3,11 @@
 #include <string>
 #include <WS2tcpip.h>
 #include <iostream>
+#include "../Addition classes and functions/my_printer.h"
 #pragma comment(lib, "ws2_32.lib")
 namespace ms
 {
+    using other::Printer;
     using FunctionResult = int;
     using FunctionParam = int;
     class MyServer {

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/my_printer.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Addition_classes_and_functions/my_printer.cpp.obj"
   "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Addition classes and functions/other_functions.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Addition_classes_and_functions/other_functions.cpp.obj"
   "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Process/my_process.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Process/my_process.cpp.obj"
   "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/Labs/Lab1/Manager/Server/my_server.cpp" "C:/Users/User81/source/repos/Megarekrut65/Operating-Systems-labs/cmake-build-debug/CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Server/my_server.cpp.obj"

@@ -32,6 +32,6 @@ namespace mp
         is_close = true;
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
-        std::cout << "Process ("<<app_path << ") is closed" << std::endl;
+        Printer::println("\nProcess (",app_path,") is closed");
     }
 }

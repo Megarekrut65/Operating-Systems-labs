@@ -118,6 +118,30 @@ Operating_Systems_labs\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\build
 .PHONY : Operating_Systems_labs\fast
 
+Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.obj: Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.obj
+.PHONY : Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.obj
+
+# target to build an object file
+Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.obj
+.PHONY : Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.obj
+
+Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.i: Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.i
+.PHONY : Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.i
+
+# target to preprocess a source file
+Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.i
+.PHONY : Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.i
+
+Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.s: Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.s
+.PHONY : Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.s
+
+# target to generate assembly for a file
+Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Operating_Systems_labs.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Operating_Systems_labs.dir\Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.s
+.PHONY : Labs\Lab1\Manager\Addition_classes_and_functions\my_printer.cpp.s
+
 Labs\Lab1\Manager\Addition_classes_and_functions\other_functions.obj: Labs\Lab1\Manager\Addition_classes_and_functions\other_functions.cpp.obj
 .PHONY : Labs\Lab1\Manager\Addition_classes_and_functions\other_functions.obj
 
@@ -271,6 +295,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Operating_Systems_labs
+	@echo ... Labs/Lab1/Manager/Addition_classes_and_functions/my_printer.obj
+	@echo ... Labs/Lab1/Manager/Addition_classes_and_functions/my_printer.i
+	@echo ... Labs/Lab1/Manager/Addition_classes_and_functions/my_printer.s
 	@echo ... Labs/Lab1/Manager/Addition_classes_and_functions/other_functions.obj
 	@echo ... Labs/Lab1/Manager/Addition_classes_and_functions/other_functions.i
 	@echo ... Labs/Lab1/Manager/Addition_classes_and_functions/other_functions.s

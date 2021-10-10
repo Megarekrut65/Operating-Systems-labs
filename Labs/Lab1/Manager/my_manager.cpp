@@ -32,15 +32,14 @@ namespace mym
         print_res("f",x,f_res);
         auto g_res = g_fut.get();
         print_res("g",x,g_res);
-        std::cout <<"Manager is closed." << std::endl;
+        Printer::println("\nManager is closed.");
+        shared.set_value(true);
     }
 
     void MyManager::print_res(const std::string& fun_name, ms::FunctionParam x, ms::FunctionResult* y) {
         if(y)
         {
-            other::set_color(Color::PURPLE, Color::BLACK);
-            std::cout << fun_name<<"("<<x<<")="<<*y << std::endl;
-            other::set_color();
+            Printer::println(Color::PURPLE, Color::BLACK,"\n",fun_name,"(",x,")=",*y);
             delete y;
         }
     }

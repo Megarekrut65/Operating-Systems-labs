@@ -3,11 +3,13 @@
 #include <tchar.h>
 #include <iostream>
 #include <WS2tcpip.h>
+#include "../Addition classes and functions/my_printer.h"
 /**
  * My process
  */
 namespace mp
 {
+    using other::Printer;
     class MyProcess {
     private:
         std::string app_path;

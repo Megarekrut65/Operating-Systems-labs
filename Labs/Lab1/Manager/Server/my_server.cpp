@@ -53,7 +53,7 @@ namespace ms
             if(err != SOCKET_ERROR) res = normalize_result(buffer);
             errors++;
         }
-
+        if(res == nullptr && !is_close) std::cerr << "\nHard fail" << std::endl;
         return res;
     }
 
@@ -62,7 +62,7 @@ namespace ms
         is_close = true;
         WSACleanup();
         closesocket(sock);
-        std::cout << "Server(" << ip<<","<<port<<") is closed" << std::endl;
+        Printer::println("\nServer(",ip,",",port,") is closed");
     }
 
     MyServer::~MyServer() {

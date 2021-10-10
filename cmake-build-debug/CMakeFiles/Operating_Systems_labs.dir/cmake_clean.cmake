@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Addition_classes_and_functions/my_printer.cpp.obj"
   "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Addition_classes_and_functions/other_functions.cpp.obj"
   "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Process/my_process.cpp.obj"
   "CMakeFiles/Operating_Systems_labs.dir/Labs/Lab1/Manager/Server/my_server.cpp.obj"

@@ -36,7 +36,7 @@ namespace mc
     {
         if (x == -1)
         {
-            return "Invalid argument!";
+            return "Function f. Error: -1 invalid argument!";
         }
         return std::to_string(x * x);
     }

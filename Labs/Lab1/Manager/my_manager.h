@@ -8,6 +8,7 @@
 namespace mym
 {
     using other::Color;
+    using other::Printer;
     class MyManager {
     private:
         static void print_res(const std::string& fun_name, ms::FunctionParam x, ms::FunctionResult* y);
