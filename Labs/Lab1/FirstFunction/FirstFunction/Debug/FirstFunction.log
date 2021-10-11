@@ -1,2 +1,3 @@
-﻿  FirstFunction.cpp
+﻿  my_client.cpp
+C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\FirstFunction\FirstFunction\my_client.cpp(40,35): warning C4101: 'e': unreferenced local variable
   FirstFunction.vcxproj -> C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\FirstFunction\Debug\FirstFunction.exe

@@ -26,5 +26,11 @@
     <ClInclude Include="my_client.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Functions\compfuncs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions\trialfuncs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

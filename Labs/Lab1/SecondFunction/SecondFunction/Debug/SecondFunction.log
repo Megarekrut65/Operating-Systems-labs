@@ -1,2 +1,3 @@
-﻿  SecondFunction.cpp
+﻿  my_client.cpp
+C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\SecondFunction\SecondFunction\my_client.cpp(40,35): warning C4101: 'e': unreferenced local variable
   SecondFunction.vcxproj -> C:\Users\User81\source\repos\Megarekrut65\Operating-Systems-labs\Labs\Lab1\SecondFunction\Debug\SecondFunction.exe

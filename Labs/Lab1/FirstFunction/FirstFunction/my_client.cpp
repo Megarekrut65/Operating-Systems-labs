@@ -32,13 +32,14 @@ namespace mc
         inet_pton(AF_INET, ip.c_str(), &hint.sin_addr);
         return hint;
     }
-    std::string MyClient::func(int x)
+    Result MyClient::func(int x)
     {
-        if (x == -1)
-        {
-            return "Function f. Error: -1 invalid argument!";
+        try {
+            return os::lab1::compfuncs::trial_f<os::lab1::compfuncs::INT_SUM>(x);
         }
-        return std::to_string(x * x);
+        catch (std::out_of_range& e) {
+            return std::get<os::lab1::compfuncs::hard_fail>(Result());
+        }
     }
     void MyClient::run() {
         sockaddr_in address = get_address();
@@ -47,16 +48,20 @@ namespace mc
             std::cerr << "Can't connect to server!" << std::endl;
             return;
         }
-        char* error = nullptr;
         int errors = 0;
+        bool hard_fail = false, soft_fail = false;
         do {
             char buffer[BUFFER_SIZE];
             int err = recv(sock, buffer, BUFFER_SIZE, 0);
-            std::string res = func(atoi(buffer));
-            int res_int = strtol(res.c_str(), &error, 10);
-            if (err != SOCKET_ERROR) send(sock, res.c_str(), BUFFER_SIZE, 0);
+            auto res = func(atoi(buffer));
+            hard_fail = std::holds_alternative<os::lab1::compfuncs::hard_fail>(res);
+            soft_fail = std::holds_alternative<os::lab1::compfuncs::soft_fail>(res);
+            std::stringstream ss;
+            if (hard_fail || soft_fail) ss << "Function f: " << res;
+            else ss << std::get<int>(res);
+            if (err != SOCKET_ERROR) send(sock, ss.str().c_str(), BUFFER_SIZE, 0);
             errors++;
-        } while (*error != 0 && errors < MAX_ERRORS);
+        } while (!hard_fail && soft_fail && errors < MAX_ERRORS);
     }
 
     void MyClient::close() {
