@@ -14,7 +14,7 @@ namespace mys
         int result = WSAStartup(ver, &data);
         if (result != 0)
         {
-            std::cerr << "Can't start WinSock, Err #" << result << std::endl;
+            Printer::print_error("\nCan't start WinSock, Err #", result);
         }
     }
 
@@ -22,7 +22,7 @@ namespace mys
         sock = socket(AF_INET, SOCK_STREAM, 0);
         if (sock == INVALID_SOCKET)
         {
-            std::cerr << "Can't create socket, Err #" << WSAGetLastError() << std::endl;
+            Printer::print_error("\nCan't create socket, Err #", WSAGetLastError());
             WSACleanup();
         }
     }
@@ -38,7 +38,7 @@ namespace mys
         sockaddr_in address = get_address();
         if(bind(sock, (sockaddr*)&address, sizeof(address)) == SOCKET_ERROR)
         {
-            std::cerr << "Can't bind socket!" << std::endl;
+            Printer::print_error("\nCan't bind socket!");
             return nullptr;
         }
         listen(sock, SOMAXCONN);
@@ -53,7 +53,7 @@ namespace mys
             if(err != SOCKET_ERROR) res = normalize_result(buffer);
             errors++;
         }
-        if(res == nullptr && !is_close) std::cerr << "\nHard fail" << std::endl;
+        if(res == nullptr && !is_close) Printer::print_error("\nHard fail");
         return res;
     }
 

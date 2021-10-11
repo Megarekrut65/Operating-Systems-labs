@@ -27,7 +27,7 @@ bool close_menu()
 }
 void user_menu(myshv::SharedValue<bool>& value)
 {
-    Printer::print("Press Enter or Ctrl+c to stop calculation.");
+    Printer::println("Press Enter or Ctrl+c to stop calculation.");
     while(!value.get_value())
     {
         if(_kbhit() && _getch() == 13)

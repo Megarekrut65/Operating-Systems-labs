@@ -18,7 +18,7 @@ namespace myp
         if (!CreateProcess(app_path.c_str(),
                            nullptr,nullptr,nullptr,FALSE,0,nullptr,nullptr,&si,&pi))
         {
-            std::cerr << "CreateProcess failed " << GetLastError() << std::endl;
+            Printer::print_error("\nCreate Process failed, Err # ",GetLastError());
             return;
         }
     }
