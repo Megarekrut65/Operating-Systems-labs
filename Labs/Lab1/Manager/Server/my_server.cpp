@@ -45,15 +45,19 @@ namespace mys
         SOCKET client = accept(sock, nullptr, nullptr);
         FunctionResult* res = nullptr;
         int errors = 0;
-        while (res == nullptr && errors < MAX_ERRORS)
+        bool hard_fail = false;
+        bool soft_fail = true;
+        while (!hard_fail && soft_fail && errors < MAX_ERRORS)
         {
+            soft_fail = false;
             send(client, std::to_string(x).c_str(), BUFFER_SIZE, 0);
             char buffer[BUFFER_SIZE];
             int err = recv(client, buffer, BUFFER_SIZE, 0);
-            if(err != SOCKET_ERROR) res = normalize_result(buffer);
+            if(err != SOCKET_ERROR) res = normalize_result(buffer, hard_fail, soft_fail);
             errors++;
+            if(soft_fail || hard_fail) Printer::print_error(buffer);
         }
-        if(res == nullptr && !is_close) Printer::print_error("\nHard fail");
+        if(res == nullptr && !is_close) Printer::print_error("\nCan't calculate result.");
         return res;
     }
 
@@ -70,12 +74,14 @@ namespace mys
         close();
     }
 
-    FunctionResult* MyServer::normalize_result(char *buffer) {
+    FunctionResult* MyServer::normalize_result(char *buffer, bool& hard_fail, bool& soft_fail) {
         if(buffer == nullptr) throw std::invalid_argument{"Buffer can't be nullptr!"};
         char* err = nullptr;
         FunctionResult res = strtol(buffer, &err, 10);
         if(*err != 0){
-            std::cerr << buffer << std::endl;
+            std::string str = buffer;
+            hard_fail = (str.find("hard") != std::string::npos);
+            soft_fail = (str.find("soft") != std::string::npos);
             return nullptr;
         }
         return new FunctionResult(res);

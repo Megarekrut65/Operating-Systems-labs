@@ -21,7 +21,7 @@ namespace mys
         sockaddr_in get_address();
         void start_up();
         void create_socket();
-        FunctionResult* normalize_result(char* buffer);
+        FunctionResult* normalize_result(char* buffer, bool& hard_fail, bool& soft_fail);
     public:
         MyServer(const std::string &ip, int port);
 
