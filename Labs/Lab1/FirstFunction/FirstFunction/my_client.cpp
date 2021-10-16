@@ -37,7 +37,7 @@ namespace mc
         try {
             return os::lab1::compfuncs::trial_f<os::lab1::compfuncs::INT_SUM>(x);
         }
-        catch (std::out_of_range& e) {
+        catch (...) {
             return std::get<os::lab1::compfuncs::hard_fail>(Result());
         }
     }

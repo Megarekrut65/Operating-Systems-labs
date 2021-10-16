@@ -2,6 +2,12 @@
 #include <mutex>
 namespace myshv
 {
+    /**
+     *
+     * @tparam Value - type of thread-safe value
+     *
+     * \brief Class-box for value to use it in different threads
+     */
     template<typename Value>
     class SharedValue {
     private:

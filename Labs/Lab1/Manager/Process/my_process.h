@@ -10,9 +10,12 @@
 namespace myp
 {
     using other::Printer;
+    /**
+     * \brief Class to open some program in other process
+     */
     class MyProcess {
     private:
-        std::string app_path;
+        std::string app_path;/* Full path to program to open*/
         PROCESS_INFORMATION pi;
         bool is_close;
         void create_new_process();

@@ -9,6 +9,9 @@ namespace mym
 {
     using other::Color;
     using other::Printer;
+    /**
+     * \brief Starts two programs that calculate functions f and g. Than starts servers to take functions result
+     */
     class MyManager {
     private:
         static void print_fun(const std::string& fun_name, mys::FunctionParam x, mys::FunctionResult* y);
