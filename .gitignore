@@ -35,3 +35,5 @@
 Labs/Lab1/FirstFunction/.vs/FirstFunction/v16/ipch/AutoPCH/468b757f1a3c1b98/FIRSTFUNCTION.ipch
 Labs/Lab1/FirstFunction/.vs/FirstFunction/v16/ipch/AutoPCH/56b1bb94d1cba20a/MY_CLIENT.ipch
 *.ipch
+Labs/Lab1/SecondFunction/.vs/SecondFunction/v16/ipch/AutoPCH/898874e33dc6b910/SECONDFUNCTION.ipch
+*.ipch
