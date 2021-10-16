@@ -29,18 +29,27 @@ namespace mym
                 std::async(std::launch::async,MyManager::calculate_function, x,std::ref(shared),
                            myd::MyData::G_APP_PATH, myd::MyData::IP, myd::MyData::G_PORT);
         auto f_res = f_fut.get();
-        print_res("f",x,f_res);
+        print_fun("f", x, f_res);
         auto g_res = g_fut.get();
-        print_res("g",x,g_res);
+        print_fun("g", x, g_res);
+        if(f_res && g_res){
+            Printer::println(Color::PURPLE, Color::BLACK,
+                             "\nf(",x,") * g(",x,") = ", *f_res * *g_res);
+        }
+        else
+        {
+            Printer::println(Color::PURPLE, Color::BLACK,
+                             "\nCan't calculate f(",x,") * g(",x,")");
+        }
         Printer::println("\nManager is closed.");
         shared.set_value(true);
     }
 
-    void MyManager::print_res(const std::string& fun_name, mys::FunctionParam x, mys::FunctionResult* y) {
+    void MyManager::print_fun(const std::string& fun_name, mys::FunctionParam x, mys::FunctionResult* y) {
         if(y)
         {
-            Printer::println(Color::PURPLE, Color::BLACK,"\n",fun_name,"(",x,")=",*y);
-            delete y;
+            Printer::println(Color::PURPLE, Color::BLACK,
+                             "\n",fun_name,"(",x,")=",*y);
         }
         else
         {
