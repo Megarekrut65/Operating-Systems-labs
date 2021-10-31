@@ -1,0 +1,9 @@
+Scheduling Type: SPN (Nonpreemptive)
+Scheduling Name: Process-Shortest Process-Served
+Simulation Run Time: 2781
+Mean: 1100
+Standard Deviation: 510
+Process #	CPU Time	IO Blocking	CPU Completed	CPU Blocked
+0		555 (ms)	100 (ms)	1700 (ms)	17 times
+1		535 (ms)	500 (ms)	535 (ms)	1 times
+2		546 (ms)	30 (ms)		546 (ms)	18 times
