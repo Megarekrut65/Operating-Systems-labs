@@ -30,12 +30,12 @@ public class Scheduling {
       if(settings != null){
           var processes = settings.getProcesses();
           for(int i = 0; i < settings.getProcessNum(); i++){
-              double dX = Common.R1();
-              while (dX == -1.0) {
-                  dX = Common.R1();
+              double dX = Common.randomX();
+              while ((dX + 1.0) <= 0.0001) {
+                  dX = Common.randomX();
               }
               dX = dX * settings.getStandardDev();
-              int cputime = (int) dX + settings.getMeanDev() + (int)(Math.random()*100);
+              int cputime = (int) dX + settings.getMeanDev();
               int ioblocking = i*100;
               if(i < processes.size()){
                   ioblocking = processes.get(i);
