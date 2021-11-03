@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="settings" type="settingsType"/>
+  <xs:complexType name="processesType">
+    <xs:sequence>
+      <xs:element type="xs:integer" name="process" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="schedulingSettingsType">
     <xs:sequence>
       <xs:element type="xs:integer" name="processNum"/>
       <xs:element type="xs:integer" name="meanDev"/>
       <xs:element type="xs:integer" name="standardDev"/>
       <xs:element type="xs:integer" name="runtime"/>
+      <xs:element type="processesType" name="processes"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="settingsType">

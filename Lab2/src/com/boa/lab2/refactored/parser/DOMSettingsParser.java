@@ -12,6 +12,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DOMSettingsParser {
     private DocumentBuilder docBuilder;
@@ -51,7 +53,18 @@ public class DOMSettingsParser {
         settings.setMeanDev(getElementValue(element,"meanDev"));
         settings.setStandardDev(getElementValue(element,"standardDev"));
         settings.setRuntime(getElementValue(element,"runtime"));
+        var processes = (Element) element.getElementsByTagName("processes").item(0);
+        settings.setProcesses(buildProcesses(processes));
         return settings;
+    }
+    private List<Integer> buildProcesses(Element processes){
+        NodeList processesList = processes.getElementsByTagName("process");
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0; i < processesList.getLength();i++){
+            var item = (Element) processesList.item(i);
+            list.add(Integer.parseInt(item.getTextContent()));
+        }
+        return list;
     }
     private static int getElementValue(Element element, String elementName) {
         NodeList nList = element.getElementsByTagName(elementName);

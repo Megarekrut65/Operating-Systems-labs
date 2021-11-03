@@ -5,5 +5,12 @@
         <meanDev>1000</meanDev>
         <standardDev>100</standardDev>
         <runtime>1000</runtime>
+        <processes>
+            <process>100</process>
+            <process>500</process>
+            <process>30</process>
+            <process>200</process>
+            <process>300</process>
+        </processes>
     </schedulingSettings>
 </settings>
