@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <schedulingSettings>
+        <processNum>5</processNum>
+        <meanDev>1000</meanDev>
+        <standardDev>100</standardDev>
+        <runtime>1000</runtime>
+    </schedulingSettings>
+</settings>

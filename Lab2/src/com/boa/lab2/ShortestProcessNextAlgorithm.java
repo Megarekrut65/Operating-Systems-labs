@@ -1,7 +1,7 @@
 package com.boa.lab2;
 
-import com.boa.lab2.simulator.Results;
-import com.boa.lab2.simulator.sProcess;
+import com.boa.lab2.refactored.Results;
+import com.boa.lab2.refactored.sProcess;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

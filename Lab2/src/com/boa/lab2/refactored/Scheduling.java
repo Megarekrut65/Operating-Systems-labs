@@ -1,16 +1,20 @@
-package com.boa.lab2.simulator;// This file contains the main() function for the Scheduling
-// simulation.  Init() initializes most of the variables by
-// reading from a provided file.  SchedulingAlgorithm.Run() is
-// called from main() to run the simulation.  Summary-Results
-// is where the summary results are written, and Summary-Processes
-// is where the process scheduling summary is written.
+package com.boa.lab2.refactored;
+/*
+This file contains the main() function for the Scheduling
+ simulation.  Init() initializes most of the variables by
+ reading from a provided file.  SchedulingAlgorithm.Run() is
+ called from main() to run the simulation.  Summary-Results
+ is where the summary results are written, and Summary-Processes
+ is where the process scheduling summary is written.
 
-// Created by Alexander Reeder, 2001 January 06
-
+ Created by Alexander Reeder, 2001 January 06
+ Refactored by Oleksandr Bandalak, 2020 November 03
+ */
 import com.boa.lab2.ShortestProcessNextAlgorithm;
 
 import java.io.*;
-import java.util.*;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 public class Scheduling {
 
@@ -59,7 +63,7 @@ public class Scheduling {
           }
           X = X * standardDev;
           cputime = (int) X + meanDev + (int) (Math.random()*100);
-          processVector.addElement(new sProcess(cputime, ioblocking, 0, 0, 0));          
+          processVector.addElement(new sProcess(cputime, ioblocking, 0, 0, 0));
         }
         if (line.startsWith("runtime")) {
           StringTokenizer st = new StringTokenizer(line);
@@ -112,11 +116,11 @@ public class Scheduling {
           }
           X = X * standardDev;
         int cputime = (int) X + meanDev;
-        processVector.addElement(new sProcess(cputime,i*100,0,0,0));          
+        processVector.addElement(new sProcess(cputime,i*100,0,0,0));
         i++;
       }
     }
-    result = SchedulingAlgorithm.Run(runtime, processVector, result);
+    result = ShortestProcessNextAlgorithm.Run(runtime, processVector, result);
     try {
       //BufferedWriter out = new BufferedWriter(new FileWriter(resultsFile));
       PrintStream out = new PrintStream(new FileOutputStream(resultsFile));
