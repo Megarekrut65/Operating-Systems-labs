@@ -7,8 +7,6 @@ package com.boa.lab2.simulator;// This file contains the main() function for the
 
 // Created by Alexander Reeder, 2001 January 06
 
-import com.boa.lab2.ShortestProcessNextAlgorithm;
-
 import java.io.*;
 import java.util.*;
 

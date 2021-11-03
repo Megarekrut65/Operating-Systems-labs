@@ -2,9 +2,9 @@
 <settings>
     <schedulingSettings>
         <processNum>5</processNum>
-        <meanDev>1000</meanDev>
-        <standardDev>100</standardDev>
-        <runtime>1000</runtime>
+        <meanDev>1100</meanDev>
+        <standardDev>510</standardDev>
+        <runtime>5000</runtime>
         <processes>
             <process>100</process>
             <process>500</process>
