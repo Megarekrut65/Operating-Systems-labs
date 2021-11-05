@@ -11,7 +11,11 @@ package com.boa.lab2.refactored;
  Refactored by Oleksandr Bandalak, 2020 November 03
  */
 import com.boa.lab2.refactored.parser.DOMSettingsParser;
+import com.boa.lab2.refactored.parser.SettingsHandler;
+import com.boa.lab2.refactored.parser.Validator;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.util.Vector;
 
@@ -50,18 +54,29 @@ public class Scheduling {
     }
     private static void checkArgs(String[] args){
         if (args.length != 2) {
-            System.out.println("Usage: 'java Scheduling <INIT FILE>'");
+            System.err.println("Usage: 'java Scheduling <INIT FILE>'");
             System.exit(-1);
         }
         schema = args[1];
         File f = new File(args[0]);
         if (!(f.exists())) {
-            System.out.println("Scheduling: error, file '" + f.getName() + "' does not exist.");
+            System.err.println("Scheduling: error, file '" + f.getName() + "' does not exist.");
             System.exit(-1);
         }
         if (!(f.canRead())) {
-            System.out.println("Scheduling: error, read of " + f.getName() + " failed.");
+            System.err.println("Scheduling: error, read of " + f.getName() + " failed.");
             System.exit(-1);
+        }
+        try {
+            var handler = new SettingsHandler();
+            Validator validator = new Validator(schema, handler);
+            validator.validate(args[0]);
+            if(handler.getErrors().size() != 0){
+                System.err.println(handler.getErrors());
+                System.exit(-1);
+            }
+        } catch (SAXException | ParserConfigurationException | IOException e) {
+            e.printStackTrace();
         }
     }
     private static void printResults(Results result){
@@ -75,7 +90,7 @@ public class Scheduling {
             out.println("Process #\tCPU Time\tIO Blocking\tCPU Completed\tCPU Blocked");
             for (int i = 0; i < processVector.size(); i++) {
                 SchedulingProcess process = processVector.get(i);
-                out.print(i + "\t");
+                out.print("\t"+i + "\t");
                 if (i < 100) out.print("\t");
                 out.println(process);
             }
@@ -88,7 +103,8 @@ public class Scheduling {
         checkArgs(args);
         System.out.println("Working...");
         init(args[0]);
-        printResults(SchedulingAlgorithm.Run(settings.getRuntime(), processVector, processFile));
+        //printResults(SchedulingAlgorithm.Run(settings.getRuntime(), processVector, processFile));
+        printResults(ShortestProcessNextAlgorithm.Run(settings.getRuntime(), processVector, processFile));
         System.out.println("Completed.");
     }
 }

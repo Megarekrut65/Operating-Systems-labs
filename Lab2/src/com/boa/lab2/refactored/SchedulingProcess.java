@@ -1,6 +1,6 @@
 package com.boa.lab2.refactored;
 
-public class SchedulingProcess {
+public class SchedulingProcess implements Comparable<SchedulingProcess>{
   private int cputime;
   private int ioblocking;
   private int cpudone;
@@ -70,5 +70,10 @@ public class SchedulingProcess {
 
   public void setNumblocked(int numblocked) {
     this.numblocked = numblocked;
+  }
+
+  @Override
+  public int compareTo(SchedulingProcess o) {
+    return Integer.compare(cputime, o.cputime);
   }
 }
