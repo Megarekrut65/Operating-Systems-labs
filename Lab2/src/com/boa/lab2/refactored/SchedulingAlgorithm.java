@@ -32,7 +32,7 @@ public class SchedulingAlgorithm {
           completed++;
           out.println(stringInfo("completed", currentProcess, process));
           if (completed == size) {
-            result.compuTime = comptime;
+            result.setCompuTime(comptime);
             out.close();
             return result;
           }
@@ -69,7 +69,7 @@ public class SchedulingAlgorithm {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    result.compuTime = comptime;
+    result.setCompuTime(comptime);
     return result;
   }
 }

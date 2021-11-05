@@ -25,12 +25,11 @@ public class Scheduling {
   private static final Vector<SchedulingProcess> processVector = new Vector<>();
   private static String resultsFile = "src/com/boa/lab2/refactored/result/Summary-Results";
   private static String processFile = "src/com/boa/lab2/refactored/result/Summary-Processes";
-  private static String schema = "";
 
-  private static void init(String file) {
-      String schema = "src/com/boa/lab2/refactored/data/scheduling.xsd";
+  private static void init(String[] args) {
+      String schema = args[1];
       DOMSettingsParser parser = new DOMSettingsParser(schema);
-      settings = parser.readSettingsFromXmlFile(file);
+      settings = parser.readSettingsFromXmlFile(args[0]);
       if(settings != null){
           var processes = settings.getProcesses();
           for(int i = 0; i < settings.getProcessNum(); i++){
@@ -57,7 +56,7 @@ public class Scheduling {
             System.err.println("Usage: 'java Scheduling <INIT FILE>'");
             System.exit(-1);
         }
-        schema = args[1];
+
         File f = new File(args[0]);
         if (!(f.exists())) {
             System.err.println("Scheduling: error, file '" + f.getName() + "' does not exist.");
@@ -69,7 +68,7 @@ public class Scheduling {
         }
         try {
             var handler = new SettingsHandler();
-            Validator validator = new Validator(schema, handler);
+            Validator validator = new Validator(args[1], handler);
             validator.validate(args[0]);
             if(handler.getErrors().size() != 0){
                 System.err.println(handler.getErrors());
@@ -82,9 +81,9 @@ public class Scheduling {
     private static void printResults(Results result){
         try {
             PrintStream out = new PrintStream(new FileOutputStream(resultsFile));
-            out.println("Scheduling Type: " + result.schedulingType);
-            out.println("Scheduling Name: " + result.schedulingName);
-            out.println("Simulation Run Time: " + result.compuTime);
+            out.println("Scheduling Type: " + result.getSchedulingType());
+            out.println("Scheduling Name: " + result.getSchedulingName());
+            out.println("Simulation Run Time: " + result.getCompuTime());
             out.println("Mean: " + settings.getMeanDev());
             out.println("Standard Deviation: " + settings.getStandardDev());
             out.println("Process #\tCPU Time\tIO Blocking\tCPU Completed\tCPU Blocked");
@@ -102,7 +101,7 @@ public class Scheduling {
     public static void main(String[] args) {
         checkArgs(args);
         System.out.println("Working...");
-        init(args[0]);
+        init(args);
         //printResults(SchedulingAlgorithm.Run(settings.getRuntime(), processVector, processFile));
         printResults(ShortestProcessNextAlgorithm.Run(settings.getRuntime(), processVector, processFile));
         System.out.println("Completed.");

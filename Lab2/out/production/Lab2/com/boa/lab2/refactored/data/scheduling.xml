@@ -4,6 +4,7 @@
         <processNum>5</processNum>
         <meanDev>1100</meanDev>
         <standardDev>510</standardDev>
+        <runtime>5000</runtime>
         <processes>
             <process>100</process>
             <process>500</process>
