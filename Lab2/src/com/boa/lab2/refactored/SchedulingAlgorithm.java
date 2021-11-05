@@ -6,7 +6,6 @@ package com.boa.lab2.refactored;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.Collections;
 import java.util.Vector;
 
 public class SchedulingAlgorithm {
