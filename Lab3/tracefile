@@ -1,8 +1,13 @@
-WRITE 504096 ... okay
-WRITE 19 ... okay
-READ 819200 ... page fault
-READ 835584 ... page fault
-READ 19 ... page fault
-READ 61 ... okay
-WRITE 31 ... okay
-WRITE 30 ... okay
+READ 65536 ... okay
+READ 16384 ... okay
+READ 114688 ... okay
+READ 0 ... okay
+READ 229376 ... page fault
+READ 49152 ... okay
+READ 65536 ... okay
+READ 147456 ... page fault
+READ 81920 ... page fault
+READ 32768 ... page fault
+READ 163840 ... page fault
+READ 16384 ... okay
+READ 245760 ... page fault

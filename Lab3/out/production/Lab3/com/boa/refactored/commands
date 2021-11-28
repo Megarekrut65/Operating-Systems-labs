@@ -1,18 +1,18 @@
 // Enter READ/WRITE commands into this file
 // READ <OPTIONAL number type: bin/hex/oct> <virtual memory address or random>
 // WRITE <OPTIONAL number type: bin/hex/oct> <virtual memory address or random>
-//READ bin 100
-//READ 19
-//WRITE hex CC32
-//READ bin 100000000000000
-//READ bin 100000000000000
-//WRITE bin 110000000000001
-WRITE random
-WRITE 19
-READ 819200
-READ 835584
-READ 19
-READ 61
-WRITE bin 11111
-WRITE bin 11110
+
+READ 65536
+READ 16384
+READ 114688
+READ 0
+READ 229376
+READ 49152
+READ 65536
+READ 147456
+READ 81920
+READ 32768
+READ 163840
+READ 16384
+READ 245760
 

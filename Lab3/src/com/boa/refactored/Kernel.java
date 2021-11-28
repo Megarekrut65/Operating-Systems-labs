@@ -27,7 +27,7 @@ public class Kernel extends Thread
   public long block = (int) Math.pow(2,12);
   public static byte addressradix = 10;
 
-  public void init( String commands , String config )  
+  public void init( String commands , String config )
   {
     File f = new File( commands );
     command_file = commands;
@@ -430,6 +430,7 @@ public class Kernel extends Thread
         {
           System.out.println( "READ " + Long.toString(instruct.addr , addressradix) + " ... page fault" );
         }
+        System.out.println("virt="+virtPageNum + ", phisi="+Virtual2Physical.pageNum( instruct.addr , virtPageNum , block ));
         PageFault.replacePage( memVector , virtPageNum , Virtual2Physical.pageNum( instruct.addr , virtPageNum , block ) , controlPanel );
         controlPanel.pageFaultValueLabel.setText( "YES" );
       } 
