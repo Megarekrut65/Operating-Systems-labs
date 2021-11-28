@@ -1,0 +1,8 @@
+WRITE 504096 ... okay
+WRITE 19 ... okay
+READ 819200 ... page fault
+READ 835584 ... page fault
+READ 19 ... page fault
+READ 61 ... okay
+WRITE 31 ... okay
+WRITE 30 ... okay

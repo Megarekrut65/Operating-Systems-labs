@@ -1,3 +1,4 @@
+package com.boa.simulator;
 import java.applet.*;
 import java.awt.*;
 

@@ -44,7 +44,7 @@ public class MemoryManagement
       } 
     }
 
-    kernel = new Kernel();
+    kernel = new ClockAlgorithm();
     controlPanel = new ControlPanel( "Memory Management" );
     if ( args.length == 1 ) 
     {

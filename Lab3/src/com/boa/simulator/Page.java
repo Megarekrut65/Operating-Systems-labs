@@ -1,4 +1,5 @@
-public class Page 
+package com.boa.simulator;
+public class Page
 {
   public int id;
   public int physical;

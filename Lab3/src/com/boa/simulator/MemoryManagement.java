@@ -1,14 +1,6 @@
 // The main MemoryManagement program, created by Alexander Reeder, 2000 Nov 19
-
-import java.applet.*;
-import java.awt.*;
+package com.boa.simulator;
 import java.io.*;
-import java.util.*;
-import ControlPanel;
-import PageFault;
-import Virtual2Physical;
-import Common;
-import Page;
 
 public class MemoryManagement 
 {

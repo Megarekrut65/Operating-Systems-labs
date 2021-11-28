@@ -1,6 +1,7 @@
 package com.boa.refactored;
 
 import java.io.*;
+import java.util.Objects;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
@@ -8,19 +9,19 @@ public class Kernel extends Thread
 {
   // The number of virtual pages must be fixed at 63 due to
   // dependencies in the GUI
-  private static int virtPageNum = 63;
+  protected static int virtPageNum = 63;
 
-  private String output = null;
-  private static final String lineSeparator = 
+  protected String output = null;
+  protected static final String lineSeparator =
     System.getProperty("line.separator");
-  private String command_file;
-  private String config_file;
-  private ControlPanel controlPanel ;
-  private Vector memVector = new Vector();
-  private Vector instructVector = new Vector();
-  private String status;
-  private boolean doStdoutLog = false;
-  private boolean doFileLog = false;
+  protected String command_file;
+  protected String config_file;
+  protected ControlPanel controlPanel ;
+  protected Vector memVector = new Vector();
+  protected Vector instructVector = new Vector();
+  protected String status;
+  protected boolean doStdoutLog = false;
+  protected boolean doFileLog = false;
   public int runs;
   public int runcycles;
   public long block = (int) Math.pow(2,12);
@@ -353,7 +354,7 @@ public class Kernel extends Thread
     controlPanel.paintPage( page );
   }
 
-  private void printLogFile(String message)
+  protected void printLogFile(String message)
   {
     String line;
     String temp = "";
@@ -412,7 +413,7 @@ public class Kernel extends Thread
     controlPanel.instructionValueLabel.setText( instruct.inst );
     controlPanel.addressValueLabel.setText( Long.toString( instruct.addr , addressradix ) );
     getPage( Virtual2Physical.pageNum( instruct.addr , virtPageNum , block ) );
-    if ( controlPanel.pageFaultValueLabel.getText() == "YES" ) 
+    if (Objects.equals(controlPanel.pageFaultValueLabel.getText(), "YES"))
     {
       controlPanel.pageFaultValueLabel.setText( "NO" );
     }

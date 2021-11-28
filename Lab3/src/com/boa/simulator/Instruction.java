@@ -1,4 +1,5 @@
-public class Instruction 
+package com.boa.simulator;
+public class Instruction
 {
   public String inst;
   public long addr;
