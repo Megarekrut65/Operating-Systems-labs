@@ -26,6 +26,7 @@ public class Kernel extends Thread
   public long block = (int) Math.pow(2,12);
   public static byte addressradix = 10;
   private final int readDuration = 30;
+  protected AddressConverter converter;
   public void init( String commands , String config )
   {
     File f;
@@ -281,6 +282,7 @@ public class Kernel extends Thread
         System.exit(-1);
       }
     }
+    converter = new AddressConverter(virtPageNum, block);
   } 
 
   public void setControlPanel(ControlPanel newControlPanel) 
@@ -317,66 +319,26 @@ public class Kernel extends Thread
       step();
     }  
   }
-  protected void doInstruction(Instruction instruct){
-    if ( instruct.getInst().startsWith( "READ" ) )
-    {
-      Page page = memVector.elementAt( Virtual2Physical.pageNum( instruct.getAddr() , virtPageNum , block ) );
-      if ( page.physical == -1 )
-      {
-        if ( doFileLog )
-        {
-          printLogFile( "READ " + Long.toString(instruct.getAddr() , addressradix) + " ... page fault" );
-        }
-        if ( doStdoutLog )
-        {
-          System.out.println( "READ " + Long.toString(instruct.getAddr() , addressradix) + " ... page fault" );
-        }
-        System.out.println("virt="+virtPageNum + ", phisi="+Virtual2Physical.pageNum( instruct.getAddr() , virtPageNum , block ));
-        PageFault.replacePage( memVector , virtPageNum , Virtual2Physical.pageNum( instruct.getAddr() , virtPageNum , block ) , controlPanel );
-        controlPanel.pageFaultValueLabel.setText( "YES" );
-      }
-      else
-      {
-        page.R = 1;
-        page.lastTouchTime = 0;
-        if ( doFileLog )
-        {
-          printLogFile( "READ " + Long.toString( instruct.getAddr() , addressradix ) + " ... okay" );
-        }
-        if ( doStdoutLog )
-        {
-          System.out.println( "READ " + Long.toString( instruct.getAddr() , addressradix ) + " ... okay" );
-        }
-      }
+  protected void log(String text){
+    if ( doFileLog ) {
+      printLogFile( text);
     }
-    if ( instruct.getInst().startsWith( "WRITE" ) )
-    {
-      Page page = (Page) memVector.elementAt( Virtual2Physical.pageNum( instruct.getAddr() , virtPageNum , block ) );
-      if ( page.physical == -1 )
-      {
-        if ( doFileLog )
-        {
-          printLogFile( "WRITE " + Long.toString(instruct.getAddr() , addressradix) + " ... page fault" );
-        }
-        if ( doStdoutLog )
-        {
-          System.out.println( "WRITE " + Long.toString(instruct.getAddr() , addressradix) + " ... page fault" );
-        }
-        PageFault.replacePage( memVector , virtPageNum , Virtual2Physical.pageNum( instruct.getAddr() , virtPageNum , block ) , controlPanel );          controlPanel.pageFaultValueLabel.setText( "YES" );
-      }
-      else
-      {
-        page.M = 1;
-        page.lastTouchTime = 0;
-        if ( doFileLog )
-        {
-          printLogFile( "WRITE " + Long.toString(instruct.getAddr() , addressradix) + " ... okay" );
-        }
-        if ( doStdoutLog )
-        {
-          System.out.println( "WRITE " + Long.toString(instruct.getAddr() , addressradix) + " ... okay" );
-        }
-      }
+    if ( doStdoutLog ) {
+      System.out.println( text);
+    }
+  }
+  protected void doInstruction(Instruction instruct){
+    Page page = memVector.elementAt( converter.virtualToPhysical( instruct.getAddr()) );
+    if ( page.physical == -1 ) {
+      log( instruct.getInst() + Long.toString(instruct.getAddr() , addressradix) + " ... page fault" );
+      PageFault.replacePage( memVector , virtPageNum , converter.virtualToPhysical( instruct.getAddr()) , controlPanel );
+      controlPanel.pageFaultValueLabel.setText( "YES" );
+    }
+    else {
+      if(instruct.isRead()) page.R = 1;
+      else if (instruct.isWrite()) page.M = 1;
+      page.lastTouchTime = 0;
+      log( instruct.getInst() + Long.toString( instruct.getAddr() , addressradix ) + " ... okay" );
     }
   }
   private void nextTime(){
@@ -397,7 +359,7 @@ public class Kernel extends Thread
     Instruction instruct = instructVector.elementAt( runs );
     controlPanel.instructionValueLabel.setText( instruct.getInst() );
     controlPanel.addressValueLabel.setText( Long.toString( instruct.getAddr() , addressradix ) );
-    getPage( Virtual2Physical.pageNum( instruct.getAddr() , virtPageNum , block ) );
+    getPage( converter.virtualToPhysical(instruct.getAddr()) );
     controlPanel.pageFaultValueLabel.setText( "NO" );
     doInstruction(instruct);
     nextTime();

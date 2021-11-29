@@ -9,6 +9,13 @@ public class AddressConverter {
         this.blockSize = blockSize;
     }
     public int virtualToPhysical(long address){
-        return Virtual2Physical.pageNum(address,count,blockSize);
+        for (int i = 0; i <= count; i++) {
+            long low = blockSize * i;
+            long high = blockSize * ( i + 1 );
+            if (low <= address && address < high) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

@@ -5,21 +5,11 @@ import java.util.Vector;
 
 public class ClockAlgorithm extends Kernel{
     private PageFaultClock pageFaultClock;
-    private AddressConverter converter;
     @Override
     public void init(String commands, String config) {
         super.init(commands, config);
         pageFaultClock = new PageFaultClock(memVector);
-        converter = new AddressConverter(virtPageNum, block);
-    }
-
-    private void log(String text){
-        if ( doFileLog ) {
-            printLogFile( text);
-        }
-        if ( doStdoutLog ) {
-            System.out.println( text);
-        }
+        log("Clock algorithm");
     }
     @Override
     protected void doInstruction(Instruction instruct){
@@ -52,11 +42,6 @@ public class ClockAlgorithm extends Kernel{
             arrow++;
             if(arrow >= cyclicList.size()) arrow = 0;
         }
-
-        /**
-         *
-         * @param replacePageIndex - page to add to virtual memory
-         */
         public void replacePage (Vector<Page> mem, int replacePageIndex , ControlPanel controlPanel){
             do{
                 Page current = cyclicList.elementAt(arrow);
@@ -68,7 +53,7 @@ public class ClockAlgorithm extends Kernel{
                 }else if(current.R == 0){
                     if(current.M == 1) writeToDisk(current);
                     Page nextPage = mem.elementAt(replacePageIndex);
-                    controlPanel.removePhysicalPage( current.physical );
+                    controlPanel.removePhysicalPage( mem.indexOf(current) );
                     nextPage.physical = current.physical;
                     controlPanel.addPhysicalPage( nextPage.physical , replacePageIndex );
                     current.inMemTime = 0;

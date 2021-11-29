@@ -1,12 +1,15 @@
+Clock algorithm
 READ65536 ... okay
 READ16384 ... okay
 READ114688 ... okay
 READ0 ... okay
 READ229376 ... page fault
+WRITE0 ... okay
 READ49152 ... okay
 READ65536 ... okay
 READ147456 ... page fault
 READ81920 ... page fault
+WRITE16384 ... okay
 READ32768 ... page fault
 READ163840 ... page fault
 READ16384 ... okay
