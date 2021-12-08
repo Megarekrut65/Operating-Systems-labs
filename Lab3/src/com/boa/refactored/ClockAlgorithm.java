@@ -17,7 +17,7 @@ public class ClockAlgorithm extends Kernel {
     protected void doInstruction(Instruction instruct) {
         Page page = memVector.elementAt(converter.virtualToPhysical(instruct.getAddr()));
         if (page.physical == -1) {
-            log(instruct.getInst() + Long.toString(instruct.getAddr(), addressradix) + " ... page fault");
+            log(instruct.getInst() +" "+ Long.toString(instruct.getAddr(), addressradix) + " ... page fault");
             pageFaultClock.replacePage(memVector,
                     converter.virtualToPhysical(instruct.getAddr()), controlPanel);
             controlPanel.pageFaultValueLabel.setText("YES");
@@ -25,7 +25,7 @@ public class ClockAlgorithm extends Kernel {
             if (instruct.isRead()) page.R = 1;
             else if (instruct.isWrite()) page.M = 1;
             page.lastTouchTime = 0;
-            log(instruct.getInst() + Long.toString(instruct.getAddr(), addressradix) + " ... okay");
+            log(instruct.getInst() + " "+Long.toString(instruct.getAddr(), addressradix) + " ... okay");
         }
     }
 
