@@ -1,4 +1,3 @@
-Clock algorithm
 READ 65536 ... okay
 READ 16384 ... okay
 READ 114688 ... okay
@@ -8,11 +7,11 @@ WRITE 0 ... okay
 READ 49152 ... okay
 READ 65536 ... okay
 READ 147456 ... page fault
-READ 81920 ... page fault
-WRITE 16384 ... okay
+READ 81920 ... okay
+WRITE 16384 ... page fault
 READ 32768 ... page fault
 READ 163840 ... page fault
-READ 16384 ... okay
+READ 16384 ... page fault
 READ 245760 ... page fault
-WRITE 114688 ... page fault
+WRITE 114688 ... okay
 WRITE 147456 ... okay
